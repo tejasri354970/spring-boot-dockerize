@@ -22,6 +22,7 @@ pipeline {
                 sh "docker login -u tejasudheer -p Teja@354970"
                 sh "docker build -t tejasudheer/spring-boot-dockerize.jar ."
                 sh "docker push tejasudheer/spring-boot-dockerize.jar"
+                
             
             }      
        }           
