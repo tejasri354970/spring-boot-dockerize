@@ -17,7 +17,7 @@ sh "${mavenHome}/bin/mvn clean package"
  stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t javatechie/devops-integration .'
+                    sh 'docker build -t target/spring-boot-docker.jar .'
                 }
             }
         }
@@ -28,6 +28,7 @@ sh "${mavenHome}/bin/mvn clean package"
                    sh 'docker login -u tejasudheer -p ${teja@354970}'
 
 }
-                   sh 'docker push javatechie/devops-integration'
+                   sh 'docker push target/spring-boot-docker.jar .'
                 }
+}
 }
