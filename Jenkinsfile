@@ -32,3 +32,4 @@ sh "${mavenHome}/bin/mvn clean package"
                 }
 }
 }
+}
