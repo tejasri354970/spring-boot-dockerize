@@ -17,7 +17,7 @@ sh "${mavenHome}/bin/mvn clean package"
  stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t target/spring-boot-docker.jar .'
+                    sh 'docker build -t spring-boot-docker.jar  .'
                 }
             }
         }
