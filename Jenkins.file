@@ -1,4 +1,11 @@
 node {
+agent any
+
+tools{
+maven 'maven3.8.2'
+
+}
+
 stage('CheckOutCode'){
 git 'https://github.com/tejasri354970/spring-boot-dockerize.git'
 }
