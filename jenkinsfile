@@ -1,0 +1,24 @@
+node {
+agent any
+
+tools{
+maven 'maven3.9.2'
+
+}
+
+stage('CheckOutCode'){
+git 'https://github.com/tejasri354970/spring-boot-dockerize.git'
+}
+
+stage('Build'){
+sh "${mavenHome}/bin/mvn clean package"
+ }
+ 
+ stage('Build docker image'){
+            steps{
+                script{
+                    sh 'docker build -t spring-boot-docker.jar  .'
+                }
+            }
+        }
+   }
