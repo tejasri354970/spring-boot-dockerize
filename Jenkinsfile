@@ -30,6 +30,6 @@ sh "${mavenHome}/bin/mvn clean package"
 }
                    sh 'docker push target/spring-boot-docker.jar .'
                 }
-}
-}
+            }
+        }
 }
