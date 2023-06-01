@@ -5,4 +5,5 @@ git 'https://github.com/tejasri354970/spring-boot-dockerize.git'
 
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
+ }
 }
