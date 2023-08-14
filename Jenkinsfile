@@ -25,7 +25,7 @@ sh "${mavenHome}/bin/mvn clean package"
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u tejasudheer -p ${teja@354970}'
+                   sh 'docker login -u tejasudheer -p ${teja@32354970}'
 
 }
                    sh 'docker push target/spring-boot-docker.jar .'
